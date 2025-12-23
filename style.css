@@ -143,9 +143,6 @@ body {
   .hero-image {
     margin-top: 20px;
   }
-  .services{
-    flex-container: column;
-  }
   .hero-btn {
     margin: 0 auto;
     text-decoration: none;
@@ -423,7 +420,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: #ffffff;
+  background: #2563eb;
   color: #ffffff;
   font-size: 22px;
   font-weight: 700;
@@ -492,6 +489,7 @@ body {
 .contact-form button:hover {
   background: #1e40af;
 }
+
 
 
 

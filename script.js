@@ -22,3 +22,41 @@ document.addEventListener('DOMContentLoaded', () => {
     toggle.textContent = '☰';
   });
 });
+
+const TOKEN = "BOT_TOKENINGNI_BUYERGA_QO‘Y";
+const CHAT_ID = "CHAT_ID_BUYERGA_QO‘Y";
+
+const form = document.getElementById("tgForm");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  const text = `
+🛠 AstroUsta yangi murojaat:
+👤 Ism: ${name}
+📧 Email: ${email}
+💬 Xabar: ${message}
+  `;
+
+  fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      chat_id: CHAT_ID,
+      text: text
+    })
+  })
+  .then(() => {
+    alert("Xabar yuborildi 🚀 Tez orada bog‘lanamiz!");
+    form.reset();
+  })
+  .catch(() => {
+    alert("Xatolik 😬 Qayta urinib ko‘ring");
+  });
+});

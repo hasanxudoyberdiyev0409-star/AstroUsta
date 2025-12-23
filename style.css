@@ -140,6 +140,8 @@ body {
     flex-direction: column;
     text-align: center;
   }
+  .service-card.horizontal {
+    flex-direction: column;
 
   .hero-image {
     margin-top: 20px;
@@ -491,4 +493,5 @@ body {
 .contact-form button:hover {
   background: #1e40af;
 }
+
 

@@ -343,6 +343,21 @@ body {
   font-size: 24px;
   color: #2563eb;
 }
+@media (max-width: 500px) {
+  .hero-container {
+    flex-direction: column;
+  }
+
+  .hero-image {
+    order: 2;
+    margin-top: 20px;
+  }
+
+  .hero-text {
+    order: 1;
+    text-align: center;
+  }
+}
 
 /* CONTACT */
 .contact {
@@ -476,3 +491,4 @@ body {
 .contact-form button:hover {
   background: #1e40af;
 }
+

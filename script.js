@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-const TOKEN = "BOT_TOKENINGNI_BUYERGA_QO‘Y";
-const CHAT_ID = "CHAT_ID_BUYERGA_QO‘Y";
+const TOKEN = "8306201335:AAEutENxkpYiamK7QE1-Ycdqvl9k5wcghcg";
+const CHAT_ID = "273331969";
 
 const form = document.getElementById("tgForm");
 
@@ -60,3 +60,4 @@ form.addEventListener("submit", function (e) {
     alert("Xatolik 😬 Qayta urinib ko‘ring");
   });
 });
+

@@ -22,12 +22,27 @@ document.addEventListener('DOMContentLoaded', () => {
     toggle.textContent = '☰';
   });
 });
+const form = document.getElementById("tgForm");
 
-fetch("send.php", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ name, email, message })
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  fetch("send.php", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ name, email, message })
+  })
+  .then(() => {
+    alert("Xabar yuborildi 🚀 Tez orada bog‘lanamiz!");
+    form.reset();
+  })
+  .catch(() => {
+    alert("Xatolik 😬 Qayta urinib ko‘ring");
+  });
 });
-
-
-
